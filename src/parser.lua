@@ -10,7 +10,7 @@ function M.run(line, plugins)
 
     local function log(plugin, extra)
         if not plugin then return end
-        return "[Interpreter]: " .. (plugin.__name or "unknown") .. extra
+        print("[Interpreter]: " .. (plugin.__name or "unknown") .. extra)
     end
 
     --Is it a new plugin?
@@ -30,7 +30,10 @@ function M.run(line, plugins)
     --Is active plugin?
     if M.activePlugin then
         local result, done = M.activePlugin.plugin.continue(line)
-        if not done then return result end
+        if not done then
+            --loop until we get to the head plugin (most parent)
+            parent.buffer = parent.buffer .. result
+        end
         log(M.activePlugin," released control.")
 
         M.activePlugin = M.activePlugin.parent or nil
