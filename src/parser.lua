@@ -2,9 +2,7 @@ local M = {}
 M.activePlugin = nil
 
 local function tryBeginPlugin(plugin, line)
-    if not plugin.begin then
-        return false, nil
-    end
+    if not plugin.begin then return false, nil end
     return plugin.begin(line)
 end
 
@@ -22,7 +20,8 @@ function M.run(line, plugins)
             M.activePlugin = {
                 plugin = loaded,
                 parent = M.activePlugin,
-                __name = loaded.__name or "unknown"
+                __name = loaded.__name or "unknown",
+                buffer = {}
             }
             return result
         end
@@ -37,7 +36,6 @@ function M.run(line, plugins)
         M.activePlugin = M.activePlugin.parent or nil
         return result
     end
-
 
     --No active or new Plugin
     local cleanLine = line:match("^%s*(.-)%s*$")
