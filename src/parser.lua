@@ -6,17 +6,16 @@ function M.run(line, plugins)
         print("[Interpreter]: " .. (plugin.__name or "unknown") .. extra)
     end
 
-    local result = line:match("^%s*(.-)%s*$")
+    local result = line
 
     for _,loaded in ipairs(plugins) do
-        if not loaded.interprete then goto try_interprete_next_plugin end
-
-        log(M.activePlugin," => (".. result..")")
-        result = loaded.interprete(result)
-
-    ::try_interprete_next_plugin::
+        if loaded.interprete then
+            log(M.activePlugin," => (".. result..")")
+            result = loaded.interprete(result)
+        end
     end
-    return result
+
+    return result .. "\n"
 end
 
 return M;

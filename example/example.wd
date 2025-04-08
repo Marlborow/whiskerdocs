@@ -1,0 +1,32 @@
+# this is a test
+*this is a test* **this is another test**,::
+this is the last ***bold and italic*** test
+::
+---
+;; This is a comment
+
+|test|test2|test3|
+|----|-----|-----|
+|tte|test  | test3|
+|tte| test |testly testington|
+
+### Listing
+- Item1
+- Item2
+> - Indented Item 1
+> - Indented Item 2
+>>  - Indented Item 3
+>>  - [Indented Youtube Link](https://youtube.com)
+>>>   - ![gentoo](gentoo.png)
+
+---
+
+>||
+    ![gentoo](gentoo.png)
+|>
+    image inline with text, using columns.
+    ::::
+    \(\text{true}\ :=\ \lambda x.\lambda y.\ x\) ::
+    \(\text{false}\ :=\ \lambda x.\lambda y.\ y\)::
+<||
+

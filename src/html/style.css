@@ -1,0 +1,116 @@
+body {
+  background-color: #0d0d0d;
+  color: #f5f5f5;
+  font-family: 'FiraCode Nerd Font Propo', 'Times New Roman', serif;
+  font-size: 1.1rem;
+  line-height: 1.75;
+  max-width: 800px;
+  margin: auto;
+  padding: 3rem 1.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'FiraCode Nerd Font Propo', 'Times New Roman', serif;
+  color: #ffffff;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: 2rem;
+  border-bottom: 1px solid #444;
+  padding-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  border-bottom: 1px solid #333;
+}
+
+p {
+  margin-bottom: 0px;
+    text-align: left;
+
+}
+
+.columns {
+    display: flex;
+    gap: 0px;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.column {
+  flex: 1;
+  text-align: left;
+  white-space: normal;
+  font-family: inherit;
+  padding: 20px; /* optional */
+  gap: 0px;
+}
+
+
+pre, code {
+  background-color: #111;
+  color: #f0f0f0;
+  font-family: monospace;
+  font-size: 0.95rem;
+  padding: 0px;
+  display: block;
+  border-radius: 0px;
+  margin-top: 0px;
+}
+
+br {
+  display: block;
+  margin-top: 0.25rem;
+}
+
+
+/* Table styling */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  margin-top: 0px;
+  font-size: 0.95rem;
+  font-family: 'FiraCode Nerd Font Propo', 'Times New Roman', serif;
+  background-color: #1a1a1a;
+}
+
+.styled-table thead {
+  background-color: #333;
+  color: #ffffff;
+}
+
+.styled-table th,
+.styled-table td {
+  border: 1px solid #333;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #444;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #262626;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #444;
+}
+
+
+/* Remove background from highlighted code */
+.hljs,
+.hljs * {
+  background: none !important;
+  background-color: transparent !important;
+  margin-top: 0px !important;
+  padding-top: 0px !important;
+}
+
