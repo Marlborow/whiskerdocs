@@ -3,9 +3,9 @@ This is my personal lightweight markdown-like syntax parser that i use to write 
 It generates HTML and, with Puppeteer, can transform the HTML into a PDF.
 
 ## Requirements
-- Lua (5.1+)
-- Node.js (*unfortunately*)
-- Puppeteer (installed via **npm**)
+- **Lua** (5.1+)
+- **Node.js** (*unfortunately*)
+- **Puppeteer** (installed via **npm**)
 
 ## Features
 It features a plugin-based system for parsing lines and by default
@@ -49,4 +49,4 @@ To generate PDF:
 ./Whisker --pdf /path/to/whiskerfile.md
 ```
 
-Not tested nor should it work by default on windows.
+Windows not tested nor should it work by default on windows.
