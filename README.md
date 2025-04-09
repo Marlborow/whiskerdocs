@@ -17,9 +17,10 @@ supports:
 - Columns
 - Tables
 - Lists (funky archaic syntax but whatever)
-
+- Comments
 ### Writing Whiskerdocs
 If a feature isn't demonstrated below, infer it follows Markdown syntax.
+- Use ;; at the start of a line for a comment.
 - Use :: for line breaks, and ::: for page breaks
 - Use >|, |>, <| for multi-column layouts
 - Use - Item and > - Nested for lists
