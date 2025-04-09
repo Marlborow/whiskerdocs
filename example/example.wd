@@ -1,32 +1,59 @@
-# this is a test
+# This is a test
 *this is a test* **this is another test**,::
-this is the last ***bold and italic*** test
-::
----
-;; This is a comment
-
-|test|test2|test3|
-|----|-----|-----|
-|tte|test  | test3|
-|tte| test |testly testington|
-
-### Listing
-- Item1
-- Item2
-> - Indented Item 1
-> - Indented Item 2
->>  - Indented Item 3
->>  - [Indented Youtube Link](https://youtube.com)
->>>   - ![gentoo](gentoo.png)
-
+this is the last ***bold and italic*** test ::
 ---
 
->||
-    ![gentoo](gentoo.png)
+>|
+    ## Listing
+    - Item1
+    - Item2
+    > - Indented Item 1
+    > - Indented Item 2
+    > - Indented Item 3
+    >> - [Indented Youtube Link](https://youtube.com)
+    >> - ![gentoo](gentoo.png)
+|>
+    ;; This is a comment
+
+    |test|test2|test3|
+    |---|-----|-----|
+    |tte|test  | test3|
+    |tte| test |testly testington|
+    |This|||
+    |Is||A|
+<|
+---
+
+>|
+    ![gentoo|c](gentoo.png)
 |>
     image inline with text, using columns.
-    ::::
+    ::
     \(\text{true}\ :=\ \lambda x.\lambda y.\ x\) ::
     \(\text{false}\ :=\ \lambda x.\lambda y.\ y\)::
-<||
+<|
 
+
+>|
+    This
+|>
+    IS
+|>
+    Four
+|>
+    Columns
+<|
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+commodo consequat.
+
+;;Next page
+:::
+
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+[Go back](#this-is-a-test)

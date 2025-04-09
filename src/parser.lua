@@ -10,7 +10,6 @@ function M.run(line, plugins)
 
     for _,loaded in ipairs(plugins) do
         if loaded.interprete then
-            log(M.activePlugin," => (".. result..")")
             result = loaded.interprete(result)
         end
     end

@@ -1,0 +1,28 @@
+#!/bin/bash
+set -e
+
+pdf_mode=false
+if [[ "$1" == "--pdf" ]]; then
+    pdf_mode=true
+    shift
+fi
+
+input="$1"
+
+if [[ -z "$input" ]]; then
+    echo "Usage: $0 [--pdf] path/to/file.wd"
+    exit 1
+fi
+
+base="${input%.wd}"
+html="${base}.html"
+pdf="${base}.pdf"
+
+lua ~/Source/whiskerdocs/whiskerdocs.lua "$input"
+
+if $pdf_mode; then
+    node src/node/html2pdf.js "$html" "$pdf"
+    echo "Generated: $pdf"
+else
+    echo "Generated: $html"
+fi

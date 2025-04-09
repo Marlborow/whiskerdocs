@@ -1,116 +1,140 @@
+/* Base layout */
 body {
-  background-color: #0d0d0d;
-  color: #f5f5f5;
-  font-family: 'FiraCode Nerd Font Propo', 'Times New Roman', serif;
-  font-size: 1.1rem;
+  background-color: #f9f9fb;
+  color: #1a1a1a;
+  font-family: 'Fira Code', 'Georgia', serif;
+  font-size: 1.05rem;
   line-height: 1.75;
-  max-width: 800px;
-  margin: auto;
-  padding: 3rem 1.5rem;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
 }
 
+/* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'FiraCode Nerd Font Propo', 'Times New Roman', serif;
-  color: #ffffff;
+  font-family: 'Fira Code', 'Georgia', serif;
+  color: #111;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  font-weight: bold;
-  line-height: 1.4;
+  font-weight: 600;
+  line-height: 1.3;
 }
 
 h1 {
-  font-size: 2rem;
-  border-bottom: 1px solid #444;
+  font-size: 2.2rem;
+  border-bottom: 2px solid #3366cc;
   padding-bottom: 0.5rem;
 }
 
 h2 {
   font-size: 1.6rem;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #cbd5e1;
 }
 
+h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Paragraphs */
 p {
-  margin-bottom: 0px;
-    text-align: left;
-
+  margin: 1rem 0;
+  text-align: justify;
+  font-family: inherit;
 }
 
+/* Columns */
 .columns {
-    display: flex;
-    gap: 0px;
-    align-items: flex-start;
-    text-align: left;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin: 2rem 0;
 }
 
 .column {
   flex: 1;
-  text-align: left;
-  white-space: normal;
-  font-family: inherit;
-  padding: 20px; /* optional */
-  gap: 0px;
+  padding: 0;
+  background-color: #ffffff;
+  border-radius: 6px;
 }
 
-
+/* Code blocks */
 pre, code {
-  background-color: #111;
-  color: #f0f0f0;
-  font-family: monospace;
+  background-color: #282c34;
+  color: #ffffff;
+  font-family: 'Fira Code', monospace;
   font-size: 0.95rem;
-  padding: 0px;
-  display: block;
-  border-radius: 0px;
-  margin-top: 0px;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
 }
 
+code {
+  padding: 0.2rem 0.4rem;
+}
+
+/* Tables */
+.styled-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 2rem 0;
+  font-size: 0.95rem;
+  font-family: 'Fira Code', monospace;
+  background-color: #ffffff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  border: 1px solid #ccd6f6;
+}
+
+.styled-table thead {
+  background-color: #e7efff;
+  color: #111;
+}
+
+.styled-table th,
+.styled-table td {
+  border-bottom: 1px solid #dde7f2;
+  padding: 0.9rem 1rem;
+  text-align: left;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f5f8ff;
+}
+
+.styled-table tbody tr:hover {
+  background-color: #edf3ff;
+}
+
+/* Links */
+a {
+  color: #3366cc;
+  text-decoration: none;
+  border-bottom: 1px dashed #3366cc;
+  font-family: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Line breaks */
 br {
   display: block;
   margin-top: 0.25rem;
 }
 
-
-/* Table styling */
-.styled-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1.5rem 0;
-  margin-top: 0px;
-  font-size: 0.95rem;
-  font-family: 'FiraCode Nerd Font Propo', 'Times New Roman', serif;
-  background-color: #1a1a1a;
+/* Page breaks */
+.page-break {
+  page-break-before: always;
+  margin: 2rem 0;
 }
 
-.styled-table thead {
-  background-color: #333;
-  color: #ffffff;
-}
-
-.styled-table th,
-.styled-table td {
-  border: 1px solid #333;
-  padding: 0.75rem;
-  text-align: left;
-}
-
-.styled-table tbody tr {
-  border-bottom: 1px solid #444;
-}
-
-.styled-table tbody tr:nth-of-type(even) {
-  background-color: #262626;
-}
-
-.styled-table tbody tr:last-of-type {
-  border-bottom: 2px solid #444;
-}
-
-
-/* Remove background from highlighted code */
-.hljs,
-.hljs * {
+/* Highlight.js cleanup */
+.hljs, .hljs * {
   background: none !important;
   background-color: transparent !important;
-  margin-top: 0px !important;
-  padding-top: 0px !important;
 }
 

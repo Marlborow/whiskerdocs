@@ -4,8 +4,8 @@ return function(use)
     use "default/heading"
     use "default/break"
     use "default/seperator"
-    use "default/table"
-    use "default/lists"
     use "default/image"
     use "default/links"
+    use "default/lists"
+    use "default/table"
 end
