@@ -48,3 +48,5 @@ To generate PDF:
 ```sh
 ./Whisker --pdf /path/to/whiskerfile.md
 ```
+
+Not tested nor should it work by default on windows.
