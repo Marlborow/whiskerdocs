@@ -1,14 +1,29 @@
 local M = {}
 
 function M.interprete(line)
-	local level, content = line:match("^(#+)%s*(.-)%s*$")
-	if level and #level >= 1 and #level <= 6 then
-		local id = content:lower():gsub("[^%w]+", "-"):gsub("^-+", ""):gsub("-+$", "")
-		return "<h" .. #level .. ' id="' .. id .. '">' .. content .. "</h" .. #level .. ">"
+	local level, rest = line:match("^(#+)%s*(.-)%s*$")
+	if not level or #level < 1 or #level > 4 then
+		return line
 	end
-	return line
+
+	local content, flags = rest:match("^(.-)%s*|%s*(.-)%s*$")
+	content = content or rest
+
+	local id = content:lower():gsub("[^%w]+", "-"):gsub("^-+", ""):gsub("-+$", "")
+
+	local class_attr = ""
+	if flags then
+		flags = flags:lower()
+		if flags:find("c") then
+			class_attr = ' class="center"'
+		elseif flags:find("l") then
+			class_attr = ' class="left"'
+		elseif flags:find("r") then
+			class_attr = ' class="right"'
+		end
+	end
+
+	return "<h" .. #level .. ' id="' .. id .. '"' .. class_attr .. ">" .. content .. "</h" .. #level .. ">"
 end
 
 return M
-
-

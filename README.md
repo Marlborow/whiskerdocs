@@ -20,16 +20,21 @@ supports:
 - Comments
 ### Writing Whiskerdocs
 If a feature isn't demonstrated below, infer it follows Markdown syntax.
+- Headers act as they normally would with the addition:
+    - \# header | **arg** where arg could equal:
+        - (**c**) entered
+        - (**l**) left
+        - (**r**) right
 - Use ;; at the start of a line for a comment.
 - Use :: for line breaks, and ::: for page breaks
 - Use >|, |>, <| for multi-column layouts
 - Use - Item and > - Nested for lists
 - Inline images: \!\[alt text\](image.png) or with options (...): \!\[desc|...\](image.png)
-  - c = centered
-  - l = left
-  - r = right
-  - w:number = width
-  - h:number = height
+  - (**c**) entered
+  - (**l**) eft
+  - (**r**) ight
+  - (**w**:*number*) width
+  - (**h**:*number*) height
 
 An Example test file can be found in the example directory.
 

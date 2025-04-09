@@ -36,6 +36,20 @@ h3 {
   margin-bottom: 0.5rem;
 }
 
+
+h1.center, h2.center, h3.center, h4.center {
+    text-align: center;
+}
+
+h1.left, h2.left, h3.left, h4.left {
+    text-align: left;
+}
+
+h1.right, h2.right, h3.right, h4.right {
+    text-align: right;
+}
+
+
 /* Paragraphs */
 p {
   margin: 1rem 0;
@@ -54,7 +68,6 @@ p {
 .column {
   flex: 1;
   padding: 0;
-  background-color: #ffffff;
   border-radius: 6px;
 }
 
