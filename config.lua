@@ -1,4 +1,5 @@
 return function(use)
+    use "default/math"
     use "default/columns"
     use "default/bold-and-italic"
     use "default/heading"

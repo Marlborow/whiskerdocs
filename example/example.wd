@@ -29,11 +29,13 @@ this is the last ***bold and italic*** test ::
 |>
     image inline with text, using columns.
     ::
-    \(\text{true}\ :=\ \lambda x.\lambda y.\ x\) ::
-    \(\text{false}\ :=\ \lambda x.\lambda y.\ y\)::
 <|
 
-
+$$
+    normal math line
+    > math line "in the middle"
+    "return" to normal ^{\"math line\"}
+$$
 >|
     This
 |>
@@ -43,16 +45,10 @@ this is the last ***bold and italic*** test ::
 |>
     Columns
 <|
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-commodo consequat.
-
 ;;Next page
 :::
 
-# This is the next page | c
+# This is the next page
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
 eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
 sunt in culpa qui officia deserunt mollit anim id est laborum.

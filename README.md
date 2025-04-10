@@ -35,6 +35,13 @@ If a feature isn't demonstrated below, infer it follows Markdown syntax.
   - (**r**) ight
   - (**w**:*number*) width
   - (**h**:*number*) height
+- Math behaves differently in double dollar sign blocks.
+    - starting with **>** outputs an inline (**\$\$**...**\$\$**)
+    - by default every line is output as \\(line\\)
+    - spaces are added after words (bla bla -> bla/ bla)
+    - \text{...} is interfaced with double quotes (**"**...**"**)
+      - you can still print double quotes via (**\\"**)
+    - the ability to add macros such as **\lam** -> **\lambda** is set within the math plugin.
 
 An Example test file can be found in the example directory.
 
